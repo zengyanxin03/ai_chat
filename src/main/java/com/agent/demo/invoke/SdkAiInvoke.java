@@ -1,0 +1,52 @@
+package com.agent.demo.invoke;// 建议dashscope SDK的版本 >= 2.12.0
+import java.util.Arrays;
+import java.lang.System;
+import com.alibaba.dashscope.aigc.multimodalconversation.MultiModalConversation;
+import com.alibaba.dashscope.aigc.multimodalconversation.MultiModalConversationParam;
+import com.alibaba.dashscope.aigc.multimodalconversation.MultiModalConversationResult;
+import com.alibaba.dashscope.common.MultiModalMessage;
+import java.util.Collections;
+import com.alibaba.dashscope.common.Role;
+import com.alibaba.dashscope.exception.ApiException;
+import com.alibaba.dashscope.exception.InputRequiredException;
+import com.alibaba.dashscope.exception.NoApiKeyException;
+import com.alibaba.dashscope.exception.UploadFileException;
+import com.alibaba.dashscope.utils.JsonUtils;
+import com.alibaba.dashscope.utils.Constants;
+
+/**
+ * 阿里云灵积 AI SDK调用qwen3.8-Max多模态大模型
+ */
+public class SdkAiInvoke {
+    static {Constants.baseHttpApiUrl="";}
+    public static MultiModalConversationResult callWithMessage() throws ApiException, NoApiKeyException, InputRequiredException, UploadFileException {
+        MultiModalConversation conv = new MultiModalConversation();
+        // 构建一个系统的预设
+        MultiModalMessage systemMsg = MultiModalMessage.builder()
+                .role(Role.SYSTEM.getValue())
+                .content(Arrays.asList(Collections.singletonMap("text", "You are a helpful assistant.")))
+                .build();
+        MultiModalMessage userMsg = MultiModalMessage.builder()
+                .role(Role.USER.getValue())
+                .content(Arrays.asList(Collections.singletonMap("text", "你是谁？")))
+                .build();
+        MultiModalConversationParam param = MultiModalConversationParam.builder()
+                // 若没有配置环境变量，请用百炼API Key将下行替换为：.apiKey("sk-xxx")
+                .apiKey("")
+                // 此处以qwen3.8-max为例，可按需更换模型名称。模型列表：https://help.aliyun.com/zh/model-studio/getting-started/models
+                .model("qwen3.8-max")
+                .messages(Arrays.asList(systemMsg, userMsg))
+                .build();
+        return conv.call(param);
+    }
+    public static void main(String[] args) {
+        try {
+            MultiModalConversationResult result = callWithMessage();
+            System.out.println(JsonUtils.toJson(result));
+        } catch (Exception e) {
+            // 使用日志框架记录异常信息
+            System.err.println("An error occurred while calling the generation service: " + e.getMessage());
+        }
+        System.exit(0);
+    }
+}
