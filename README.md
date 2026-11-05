@@ -34,3 +34,5 @@
 3.观察（Observe）：获取工具返回的结果，反馈给智能体进行下一步决策。比如将打开的网页代码输入给 AI。
 
 4.循环迭代：不断重复上述 3 个过程，直到任务完成或达到终止条件。
+<img width="1042" height="476" alt="image" src="https://github.com/user-attachments/assets/7ed23c30-7b45-4d0d-aebb-17686b33c605" />
+
