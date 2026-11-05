@@ -16,6 +16,8 @@
 6.工具执行抓取并返回数据
 
 7.程序将抓取的数据传回给大模型
+<img width="1490" height="838" alt="image" src="https://github.com/user-attachments/assets/da0a3bcb-e73b-43ec-95ff-f7295870a43e" />
+
 
 8.大模型分析网页数据，生成关于"什么是劳动法?"的回答
 
