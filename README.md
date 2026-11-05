@@ -22,3 +22,6 @@
 9.程序将大模型的回答输出给用户
 
 <img width="1490" height="838" alt="image" src="https://github.com/user-attachments/assets/da0a3bcb-e73b-43ec-95ff-f7295870a43e" />
+
+<img width="2512" height="1306" alt="image" src="https://github.com/user-attachments/assets/33a95f5f-d94f-47c8-9367-6251aa37328a" />
+
