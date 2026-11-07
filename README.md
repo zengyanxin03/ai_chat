@@ -3,6 +3,7 @@
 
 ##### RAG检索增强生成工作流程
 
+<img width="1430" height="824" alt="image" src="https://github.com/user-attachments/assets/97c3f249-74ca-4fb6-b50b-a910c50d251e" />
 
 
 ##### 工具调用流程
