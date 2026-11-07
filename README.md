@@ -1,6 +1,10 @@
 # ai_chat
 企业法务咨询助手
 
+##### RAG检索增强生成工作流程
+
+
+
 ##### 工具调用流程
 
 1.用户提出"请用一句话介绍什么是劳动法?"
@@ -35,5 +39,4 @@
 
 4.循环迭代：不断重复上述 3 个过程，直到任务完成或达到终止条件。
 <img width="1214" height="616" alt="image" src="https://github.com/user-attachments/assets/f26507ed-dcca-4ed0-81b7-6a3b4e1e6858" />
-
 
