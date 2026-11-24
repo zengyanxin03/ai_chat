@@ -1,6 +1,10 @@
 # ai_chat
 企业法务咨询助手
 
+##### 项目模块图
+<img width="699" height="1015" alt="image" src="https://github.com/user-attachments/assets/0e428a06-6d30-4396-b042-2789efabe1ff" />
+
+
 ##### RAG检索增强生成工作流程
 
 <img width="1430" height="824" alt="image" src="https://github.com/user-attachments/assets/97c3f249-74ca-4fb6-b50b-a910c50d251e" />
